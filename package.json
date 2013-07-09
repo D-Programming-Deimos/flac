@@ -1,0 +1,9 @@
+{
+    "name": "flac",
+    "description": "Deimos bindings for flac, a free lossless audio codec library",
+    "homepage": "http://xiph.org/flac/",
+    "importPaths": ["."],
+    "targetType": "sourceLibrary",
+    "license": "BSD",
+    "libs" : ["flac"]
+}
