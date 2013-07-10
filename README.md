@@ -11,7 +11,7 @@ Introduction from FLAC's homepage:
 
 Homepage: http://xiph.org/flac/
 
-Library Version: 1.2.1
+Library Version: 1.3.0
 
 License: The flac library uses the BSD license, and the D bindings carry the
 same copyright and license as the C headers.
