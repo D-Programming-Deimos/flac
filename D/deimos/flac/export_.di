@@ -1,5 +1,6 @@
 /* libFLAC - Free Lossless Audio Codec library
- * Copyright (C) 2000,2001,2002,2003,2004,2005,2006,2007  Josh Coalson
+ * Copyright (C) 2000-2009  Josh Coalson
+ * Copyright (C) 2011-2013  Xiph.Org Foundation
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -63,11 +64,11 @@ nothrow:
  */
 
 /** These #defines will mirror the libtool-based library version number, see
- * http://www.gnu.org/software/libtool/manual.html#Libtool-versioning
+ * http://www.gnu.org/software/libtool/manual/libtool.html#Libtool-versioning
  */
-enum FLAC_API_VERSION_CURRENT = 10;
+enum FLAC_API_VERSION_CURRENT = 11;
 enum FLAC_API_VERSION_REVISION = 0; /**< see above */
-enum FLAC_API_VERSION_AGE = 2; /**< see above */
+enum FLAC_API_VERSION_AGE = 3; /**< see above */
 
 
 /** \c 1 if the library has been compiled with support for Ogg FLAC, else \c 0. */
