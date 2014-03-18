@@ -38,7 +38,7 @@ version(Posix) {}
 else version(Windows) {}
 else static assert(0, "Unsupported OS.");
 
-extern(System):
+extern(C):
 nothrow:
 
 

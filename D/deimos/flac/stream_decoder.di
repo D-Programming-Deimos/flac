@@ -43,7 +43,7 @@ version(Posix) {}
 else version(Windows) {}
 else static assert(0, "Unsupported OS.");
 
-extern(System):
+extern(C):
 nothrow:
 
 
@@ -252,7 +252,7 @@ enum FLAC__StreamDecoderState
  *  Using a FLAC__StreamDecoderState as the index to this array
  *  will give the string equivalent.  The contents should not be modified.
  */
-extern __gshared const char** FLAC__StreamDecoderStateString;
+export extern __gshared const char** FLAC__StreamDecoderStateString;
 
 
 /** Possible return values for the FLAC__stream_decoder_init_*() functions.
@@ -289,7 +289,7 @@ enum FLAC__StreamDecoderInitStatus
  *  Using a FLAC__StreamDecoderInitStatus as the index to this array
  *  will give the string equivalent.  The contents should not be modified.
  */
-extern __gshared const char** FLAC__StreamDecoderInitStatusString;
+export extern __gshared const char** FLAC__StreamDecoderInitStatusString;
 
 
 /** Return values for the FLAC__StreamDecoder read callback.
@@ -319,7 +319,7 @@ enum FLAC__StreamDecoderReadStatus
  *  Using a FLAC__StreamDecoderReadStatus as the index to this array
  *  will give the string equivalent.  The contents should not be modified.
  */
-extern __gshared const char** FLAC__StreamDecoderReadStatusString;
+export extern __gshared const char** FLAC__StreamDecoderReadStatusString;
 
 
 /** Return values for the FLAC__StreamDecoder seek callback.
@@ -341,7 +341,7 @@ enum FLAC__StreamDecoderSeekStatus
  *  Using a FLAC__StreamDecoderSeekStatus as the index to this array
  *  will give the string equivalent.  The contents should not be modified.
  */
-extern __gshared const char** FLAC__StreamDecoderSeekStatusString;
+export extern __gshared const char** FLAC__StreamDecoderSeekStatusString;
 
 
 /** Return values for the FLAC__StreamDecoder tell callback.
@@ -364,7 +364,7 @@ enum FLAC__StreamDecoderTellStatus
  *  Using a FLAC__StreamDecoderTellStatus as the index to this array
  *  will give the string equivalent.  The contents should not be modified.
  */
-extern __gshared const char** FLAC__StreamDecoderTellStatusString;
+export extern __gshared const char** FLAC__StreamDecoderTellStatusString;
 
 
 /** Return values for the FLAC__StreamDecoder length callback.
@@ -386,7 +386,7 @@ enum FLAC__StreamDecoderLengthStatus
  *  Using a FLAC__StreamDecoderLengthStatus as the index to this array
  *  will give the string equivalent.  The contents should not be modified.
  */
-extern __gshared const char** FLAC__StreamDecoderLengthStatusString;
+export extern __gshared const char** FLAC__StreamDecoderLengthStatusString;
 
 
 /** Return values for the FLAC__StreamDecoder write callback.
@@ -405,7 +405,7 @@ enum FLAC__StreamDecoderWriteStatus
  *  Using a FLAC__StreamDecoderWriteStatus as the index to this array
  *  will give the string equivalent.  The contents should not be modified.
  */
-extern __gshared const char** FLAC__StreamDecoderWriteStatusString;
+export extern __gshared const char** FLAC__StreamDecoderWriteStatusString;
 
 
 /** Possible values passed back to the FLAC__StreamDecoder error callback.
@@ -443,7 +443,7 @@ enum FLAC__StreamDecoderErrorStatus
  *  Using a FLAC__StreamDecoderErrorStatus as the index to this array
  *  will give the string equivalent.  The contents should not be modified.
  */
-extern __gshared const char** FLAC__StreamDecoderErrorStatusString;
+export extern __gshared const char** FLAC__StreamDecoderErrorStatusString;
 
 
 /***********************************************************************
