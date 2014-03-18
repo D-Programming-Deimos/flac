@@ -41,7 +41,7 @@ version(Posix) {}
 else version(Windows) {}
 else static assert(0, "Unsupported OS.");
 
-extern(System):
+extern(C):
 nothrow:
 
 
@@ -451,11 +451,14 @@ struct FLAC__FrameHeader
      * decoder will always convert a frame number to a sample number because
      * the rules are complex. */
 
-    union
+    union Number
     {
         FLAC__uint32 frame_number;
         FLAC__uint64 sample_number;
     }
+
+    Number number;
+
     /**< The frame number or sample number of first sample in frame;
      * use the \a number_type value to determine which to use. */
 
@@ -881,7 +884,7 @@ struct FLAC__StreamMetadata
     uint length;
     /**< Length, in bytes, of the block data as it appears in the stream. */
 
-    union
+    union Data
     {
         FLAC__StreamMetadata_StreamInfo stream_info;
         FLAC__StreamMetadata_Padding padding;
@@ -892,6 +895,8 @@ struct FLAC__StreamMetadata
         FLAC__StreamMetadata_Picture picture;
         FLAC__StreamMetadata_Unknown unknown;
     }
+
+    Data data;
     /**< Polymorphic block data; use the \a type value to determine which
      * to use. */
 }
