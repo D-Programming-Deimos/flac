@@ -68,8 +68,8 @@ static FLAC__bool write_little_endian_uint32(FILE* f, FLAC__uint32 x)
 
 int main(string[] args)
 {
-	auto argc() { return args.length; }
-	alias argv = args;
+    auto argc() { return args.length; }
+    alias argv = args;
 
     FLAC__bool ok = true;
     FLAC__StreamDecoder* decoder;
@@ -110,8 +110,8 @@ int main(string[] args)
         ok = FLAC__stream_decoder_process_until_end_of_stream(decoder);
         stderr.writefln("decoding: %s\n", ok ? "succeeded" : "FAILED");
 
-		// workaround for API mismatch
-		const(char)*[10] data = *cast(const(char)*[10]*)&FLAC__StreamDecoderStateString;
+        // workaround for API mismatch
+        const(char)*[10] data = *cast(const(char)*[10]*)&FLAC__StreamDecoderStateString;
 
         stderr.writefln("   state: %s\n", data[FLAC__stream_decoder_get_state(decoder)].to!string);
     }
@@ -203,7 +203,5 @@ extern(C) void metadata_callback(const FLAC__StreamDecoder* decoder, const FLAC_
 
 extern(C) void error_callback(const FLAC__StreamDecoder* decoder, FLAC__StreamDecoderErrorStatus status, void* client_data)
 {
-    //~ (void)decoder, (void)client_data;
-
     stderr.writefln("Got error callback: %s\n", FLAC__StreamDecoderErrorStatusString[status]);
 }
